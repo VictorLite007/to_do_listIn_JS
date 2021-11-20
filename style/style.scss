@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFC286;
+}
+
+.wrapper {
+    background: #fff;
+    width: 400px;
+    max-height: 430px;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 50px;
+    }
+
+    .inputField {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+
+        input{
+            width: 85%;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #ccc;
+            padding-left: 5px;
+
+        }
+
+        button{
+            width: 13%;
+            background: #FFBF86;
+            border: 3px solid #F8BF86;
+            border-radius: 5px;
+            outline: none;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: all .3s ease;
+            opacity: 0.4;
+            pointer-events: none;
+
+            &.active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    .todos{
+        list-style: none;
+        overflow-y: auto;
+        max-height: 220px;
+        margin-top: 20px;
+
+        li{
+            display: flex;
+            height: 50px;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 5px;
+            overflow: hidden;
+            background: #FBF3E4;
+            padding-left: 5px;
+            border-radius: 5px;
+            
+            span {
+                width: 50px;
+                height: 100%;
+                background: #FF0000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 30px;
+                border-radius: 0 5px 5px 0;
+                position: absolute;
+                right: -50px;
+                transition: all .3s ease;
+            }
+
+            &:hover span{
+                right: 0;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        width: calc(100% - 20px);
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            background: #FFBF86;
+            border: 3px solid #F8BF86;
+            border-radius: 5px;
+            outline: none;
+            font-weight: 400;
+            letter-spacing: 2px;
+            padding: 6px 10px;
+            color: #fff;
+            opacity: .5;
+            &.active{
+                opacity: 1;
+            }
+        }
+    }
+
+
+}
+
+
+
